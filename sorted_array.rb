@@ -38,10 +38,10 @@ def first_larger_index(target, start_ind = 0, end_ind = @internal_arr.size)
     else
       #otherwise, the above is hitting the below until they meet
       mid_ind = ( end_ind + start_ind ) / 2 
-      if target > @internal_arr[ mid_ind ]
-        return first_larger_index(target, start_ind, mid_ind)
-      else 
+      if target > @internal_arr[mid_ind]
         return first_larger_index(target, mid_ind + 1, end_ind)
+      else 
+        return first_larger_index(target, start_ind, mid_ind)
       end 
     end
 
